@@ -1,0 +1,45 @@
+{
+  "name": "images-local-view",
+  "version": "1.0.0",
+  "description": "Browse and manage local images from any folder.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "images-view": "./bin/images-view.js"
+  },
+  "engines": {
+    "node": ">=22.12"
+  },
+  "files": [
+    "bin/",
+    "server/",
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "dev": "node scripts/dev.js",
+    "dev:client": "vite",
+    "build": "vite build",
+    "start": "node bin/images-view.js",
+    "test": "node --test test/*.test.js",
+    "test:e2e": "node test/e2e.js",
+    "prepack": "npm run build"
+  },
+  "dependencies": {
+    "@ant-design/icons-vue": "^7.0.1",
+    "ant-design-vue": "^4.2.6",
+    "express": "^5.3.0",
+    "multer": "^2.5.0",
+    "open": "^11.0.4",
+    "pinia": "^4.1.0",
+    "sharp": "^0.35.5",
+    "vue": "^3.5.44",
+    "vue-router": "^5.4.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@vitejs/plugin-vue": "^6.0.10",
+    "vite": "^8.3.5"
+  }
+}
